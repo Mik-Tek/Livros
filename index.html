@@ -1,101 +1,117 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>Meus Mangás Favoritos</title>
-  <style>
-    body {
-      background-color: #000;
-      color: white;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background: linear-gradient(to right, #3f51b5, #9c27b0);
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    header p {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-      color: #ddd;
-    }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
-    }
-    .manga {
-      background-color: #1e1e1e;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-      text-align: center;
-      padding-bottom: 1rem;
-    }
-    .manga img {
-      width: 100%;
-      height: auto;
-    }
-    .manga h2 {
-      margin: 0.8rem 0 0.3rem;
-    }
-    .manga p {
-      padding: 0 1rem;
-      font-size: 0.9rem;
-      color: #ccc;
-    }
-    .manga a {
-      text-decoration: none;
-      background: #6200ea;
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 8px;
-      transition: background 0.3s;
-      display: inline-block;
-      margin-top: 0.7rem;
-    }
-    .manga a:hover {
-      background: #3700b3;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Livros Favoritos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gradient-header {
+            background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+        }
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .book-image {
+            height: 300px;
+            object-fit: cover;
+            border-top-left-radius: 0.5rem;
+            border-top-right-radius: 0.5rem;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <h1>Meus Mangás Favoritos</h1>
-    <p>Esses são alguns dos meus mangás preferidos que recomendo para todos os fãs de boas histórias!</p>
-  </header>
-  <main class="container">
-    <div class="manga">
-      <img src="mob.jpg" alt="Mob Psycho 100">
-      <h2>Mob Psycho 100</h2>
-      <p>Mob é um garoto com poderes psíquicos incríveis que tenta viver uma vida normal apesar de suas habilidades.</p>
-      <a href="https://www.amazon.com.br/Mob-Psycho-100-Vol-ONE/dp/6525919649" target="_blank">Comprar</a>
-    </div>
-    <div class="manga">
-      <img src="demon.jpg" alt="Demon Slayer">
-      <h2>Demon Slayer</h2>
-      <p>Tanjiro parte em uma jornada para salvar sua irmã Nezuko e derrotar demônios que aterrorizam o Japão feudal.</p>
-      <a href="https://www.amazon.com.br/Demon-Slayer-Kimetsu-Yaiba-Vol/dp/8542629280" target="_blank">Comprar</a>
-    </div>
-    <div class="manga">
-      <img src="jujutsu.jpg" alt="Jujutsu Kaisen">
-      <h2>Jujutsu Kaisen</h2>
-      <p>Yuji Itadori entra no mundo dos feiticeiros para enfrentar maldições perigosas e proteger a humanidade.</p>
-      <a href="https://www.amazon.com.br/Jujutsu-Kaisen-Vol-Gege-Akutami/dp/6555128186" target="_blank">Comprar</a>
-    </div>
-    <div class="manga">
-      <img src="onepiece.jpg" alt="One Piece">
-      <h2>One Piece</h2>
-      <p>Luffy e sua tripulação viajam pelos mares em busca do tesouro lendário One Piece e aventuras inesquecíveis.</p>
-      <a href="https://www.amazon.com.br/One-Piece-Ed-Eiichiro-Oda/dp/8573516976" target="_blank">Comprar</a>
-    </div>
-  </main>
+<body class="bg-gray-100 min-h-screen">
+    <!-- Cabeçalho -->
+    <header class="gradient-header text-white py-8 px-4 shadow-lg">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Meus Livros</h1>
+            <p class="text-xl md:text-2xl font-light">Meus livros que eu gosto e recomendo para as pessoas</p>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container mx-auto py-12 px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Card One Piece -->
+            <div class="book-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                <img src="onepiece.jpg" alt="One Piece" class="w-full book-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">One Piece</h3>
+                    <p class="text-gray-600 mb-4">Acompanhe as aventuras de Monkey D. Luffy e seus amigos piratas enquanto buscam o lendário tesouro One Piece em uma jornada épica pelos mares.</p>
+                    <a href="https://www.amazon.com.br/One-Piece-1-Eiichiro-Oda/dp/8542612439" target="_blank" class="inline-block bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded transition-colors">
+                        Comprar <i class="fas fa-shopping-cart ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card Demon Slayer -->
+            <div class="book-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                <img src="demon.jpg" alt="Demon Slayer" class="w-full book-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Demon Slayer</h3>
+                    <p class="text-gray-600 mb-4">A emocionante história de Tanjiro Kamado, um jovem que se torna um caçador de demônios para vingar sua família e curar sua irmã transformada em demônio.</p>
+                    <a href="https://www.amazon.com.br/Demon-Slayer-Kimetsu-No-Yaiba/dp/8542620636" target="_blank" class="inline-block bg-purple-500 hover:bg-purple-600 text-white font-medium py-2 px-4 rounded transition-colors">
+                        Comprar <i class="fas fa-shopping-cart ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card Jujutsu Kaisen -->
+            <div class="book-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                <img src="jujutsu.jpg" alt="Jujutsu Kaisen" class="w-full book-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Jujutsu Kaisen</h3>
+                    <p class="text-gray-600 mb-4">Yuji Itadori engole um objeto amaldiçoado e se torna hospedeiro de um poderoso demônio, entrando em uma escola de feiticeiros para combater maldições.</p>
+                    <a href="https://www.amazon.com.br/Jujutsu-Kaisen-Gege-Akutami/dp/6555122565" target="_blank" class="inline-block bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded transition-colors">
+                        Comprar <i class="fas fa-shopping-cart ml-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card Mob Psycho 100 -->
+            <div class="book-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300">
+                <img src="mob.jpg" alt="Mob Psycho 100" class="w-full book-image">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Mob Psycho 100</h3>
+                    <p class="text-gray-600 mb-4">Shigeo "Mob" Kageyama é um poderoso psíquico que tenta viver uma vida normal, mas suas emoções podem liberar um poder incontrolável quando ele atinge seu limite.</p>
+                    <a href="https://www.amazon.com.br/Mob-Psycho-100-ONE/dp/8545709151" target="_blank" class="inline-block bg-green-500 hover:bg-green-600 text-white font-medium py-2 px-4 rounded transition-colors">
+                        Comprar <i class="fas fa-shopping-cart ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Rodapé com link para GitHub -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold mb-4">Gostou das recomendações?</h2>
+            <p class="mb-6">Visite meu GitHub para ver mais projetos como este!</p>
+            <a href="https://github.com/Mik-Tek" target="_blank" class="inline-flex items-center bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-6 rounded-full transition-colors">
+                <i class="fab fa-github text-2xl mr-3"></i>
+                Acessar GitHub
+            </a>
+            <p class="mt-6 text-gray-400">© 2023 Meus Livros Favoritos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Efeito de hover nos cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.book-card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transition = 'all 0.3s ease';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transition = 'all 0.3s ease';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
