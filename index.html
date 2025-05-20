@@ -20,6 +20,11 @@
       margin: 0;
       font-size: 2.5rem;
     }
+    header p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #ddd;
+    }
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -39,7 +44,12 @@
       height: auto;
     }
     .manga h2 {
-      margin: 0.8rem 0 0.5rem;
+      margin: 0.8rem 0 0.3rem;
+    }
+    .manga p {
+      padding: 0 1rem;
+      font-size: 0.9rem;
+      color: #ccc;
     }
     .manga a {
       text-decoration: none;
@@ -48,6 +58,8 @@
       padding: 0.5rem 1rem;
       border-radius: 8px;
       transition: background 0.3s;
+      display: inline-block;
+      margin-top: 0.7rem;
     }
     .manga a:hover {
       background: #3700b3;
@@ -57,26 +69,31 @@
 <body>
   <header>
     <h1>Meus Mangás Favoritos</h1>
+    <p>Esses são alguns dos meus mangás preferidos que recomendo para todos os fãs de boas histórias!</p>
   </header>
   <main class="container">
     <div class="manga">
       <img src="mob.jpg" alt="Mob Psycho 100">
       <h2>Mob Psycho 100</h2>
+      <p>Mob é um garoto com poderes psíquicos incríveis que tenta viver uma vida normal apesar de suas habilidades.</p>
       <a href="https://www.amazon.com.br/Mob-Psycho-100-Vol-ONE/dp/6525919649" target="_blank">Comprar</a>
     </div>
     <div class="manga">
       <img src="demon.jpg" alt="Demon Slayer">
       <h2>Demon Slayer</h2>
+      <p>Tanjiro parte em uma jornada para salvar sua irmã Nezuko e derrotar demônios que aterrorizam o Japão feudal.</p>
       <a href="https://www.amazon.com.br/Demon-Slayer-Kimetsu-Yaiba-Vol/dp/8542629280" target="_blank">Comprar</a>
     </div>
     <div class="manga">
       <img src="jujutsu.jpg" alt="Jujutsu Kaisen">
       <h2>Jujutsu Kaisen</h2>
+      <p>Yuji Itadori entra no mundo dos feiticeiros para enfrentar maldições perigosas e proteger a humanidade.</p>
       <a href="https://www.amazon.com.br/Jujutsu-Kaisen-Vol-Gege-Akutami/dp/6555128186" target="_blank">Comprar</a>
     </div>
     <div class="manga">
       <img src="onepiece.jpg" alt="One Piece">
       <h2>One Piece</h2>
+      <p>Luffy e sua tripulação viajam pelos mares em busca do tesouro lendário One Piece e aventuras inesquecíveis.</p>
       <a href="https://www.amazon.com.br/One-Piece-Ed-Eiichiro-Oda/dp/8573516976" target="_blank">Comprar</a>
     </div>
   </main>
