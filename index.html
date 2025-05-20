@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,116 +8,84 @@
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #3a0ca3, #4361ee);
-      color: white;
+      background-color: #000;
+      color: #fff;
     }
     header {
+      background: linear-gradient(to right, #3b82f6, #8b5cf6);
+      padding: 20px;
       text-align: center;
-      padding: 50px 20px;
     }
     header h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2em;
-      color: #ddd;
+      margin: 0;
     }
     main {
-      background-color: #000;
-      padding: 40px 20px;
+      padding: 20px;
     }
     h2 {
-      text-align: center;
-      font-size: 2em;
-      margin-bottom: 40px;
+      color: #a78bfa;
     }
-    .livros {
+    .mangas {
       display: flex;
       flex-wrap: wrap;
+      gap: 20px;
       justify-content: center;
-      gap: 30px;
     }
-    .livro {
+    .manga {
       background-color: #111;
-      border-radius: 12px;
-      width: 250px;
-      padding: 20px;
-      box-shadow: 0 0 10px #000;
+      border: 2px solid #4f46e5;
+      border-radius: 10px;
+      padding: 15px;
+      width: 200px;
       text-align: center;
     }
-    .livro img {
+    .manga img {
       width: 100%;
-      border-radius: 8px;
+      height: auto;
+      border-radius: 5px;
     }
-    .livro h3 {
-      margin: 15px 0 5px;
-    }
-    .livro p {
-      margin: 5px 0;
-      color: #ccc;
-    }
-    .botao {
+    .manga a {
       display: inline-block;
-      margin-top: 15px;
-      padding: 10px 20px;
-      background-color: #7209b7;
+      margin-top: 10px;
+      padding: 8px 12px;
+      background-color: #3b82f6;
       color: white;
       text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-      transition: background-color 0.3s;
+      border-radius: 5px;
     }
-    .botao:hover {
-      background-color: #b5179e;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #ccc;
+    .manga a:hover {
+      background-color: #2563eb;
     }
   </style>
 </head>
 <body>
   <header>
     <h1>Meus Mangás Favoritos</h1>
-    <p>Este site é uma lista com meus mangás preferidos, com autores, ano e links para compra!</p>
   </header>
   <main>
-    <h2>Mangás</h2>
-    <div class="livros">
-      <div class="livro">
-        <img src="https://upload.wikimedia.org/wikipedia/pt/f/f1/Jujutsu_Kaisen_volume_1.jpg" alt="Capa de Jujutsu Kaisen">
-        <h3>Jujutsu Kaisen</h3>
-        <p>Autor: Gege Akutami</p>
-        <p>Ano: 2018</p>
-        <a class="botao" href="https://www.amazon.com.br/dp/6555123714" target="_blank">Comprar</a>
+    <h2>Meus Livros</h2>
+    <div class="mangas">
+      <div class="manga">
+        <img src="71z81R2ZA6L._SY466_.jpg" alt="Mob Psycho 100">
+        <p>Mob Psycho 100</p>
+        <a href="https://www.amazon.com.br/Mob-Psycho-100-Vol-ONE/dp/6525919649" target="_blank">Comprar</a>
       </div>
-      <div class="livro">
-        <img src="https://m.media-amazon.com/images/I/91q0BEOuhvL._SY466_.jpg" alt="Capa de Demon Slayer">
-        <h3>Demon Slayer</h3>
-        <p>Autor: Koyoharu Gotouge</p>
-        <p>Ano: 2016</p>
-        <a class="botao" href="https://www.amazon.com.br/dp/6555121142" target="_blank">Comprar</a>
+      <div class="manga">
+        <img src="61cj15zKw3L._SX342_SY445_.jpg" alt="Demon Slayer">
+        <p>Demon Slayer</p>
+        <a href="https://www.amazon.com.br/Demon-Slayer-Kimetsu-Yaiba-Vol/dp/8542629280" target="_blank">Comprar</a>
       </div>
-      <div class="livro">
-        <img src="https://m.media-amazon.com/images/I/81OwKD8zrxL._SY466_.jpg" alt="Capa de One Piece">
-        <h3>One Piece</h3>
-        <p>Autor: Eiichiro Oda</p>
-        <p>Ano: 1997</p>
-        <a class="botao" href="https://www.amazon.com.br/dp/8577877774" target="_blank">Comprar</a>
+      <div class="manga">
+        <img src="71VS-OuXOjL._SY466_.jpg" alt="Jujutsu Kaisen">
+        <p>Jujutsu Kaisen</p>
+        <a href="https://www.amazon.com.br/Jujutsu-Kaisen-Vol-Gege-Akutami/dp/6555128186" target="_blank">Comprar</a>
       </div>
-      <div class="livro">
-        <img src="https://m.media-amazon.com/images/I/91YbBd-vq0L._SY466_.jpg" alt="Outro Mangá">
-        <h3>Tokyo Ghoul</h3>
-        <p>Autor: Sui Ishida</p>
-        <p>Ano: 2011</p>
-        <a class="botao" href="https://www.amazon.com.br/dp/8542614042" target="_blank">Comprar</a>
+      <div class="manga">
+        <img src="716EGgqzyOL._SY466_.jpg" alt="One Piece">
+        <p>One Piece</p>
+        <a href="https://www.amazon.com.br/One-Piece-Ed-Eiichiro-Oda/dp/8573516976" target="_blank">Comprar</a>
       </div>
     </div>
   </main>
-  <footer>
-    <p>© 2025 Meus Mangás Favoritos</p>
-  </footer>
 </body>
 </html>
